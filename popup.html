@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenList 豆包一键更新</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <span class="title">豆包 Cookie 一键更新</span>
+    <a href="#" id="openOptions" class="settings" title="设置">设置</a>
+  </div>
+
+  <div class="info">
+    <div>服务器：<b id="infoServer">-</b></div>
+    <div>存储 <b id="infoStorage">-</b>　驱动：<b id="infoDriver">-</b></div>
+  </div>
+
+  <div class="btns">
+    <button id="btnAuto" class="primary">从浏览器读取豆包 Cookie 并更新</button>
+    <button id="btnPaste">手动粘贴 Cookie 更新</button>
+  </div>
+
+  <div id="pasteArea" class="hidden">
+    <textarea id="cookieInput" rows="4" placeholder="粘贴从浏览器开发者工具复制的完整 Cookie"></textarea>
+    <button id="btnPasteGo" class="primary">更新</button>
+  </div>
+
+  <div id="log" class="log"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

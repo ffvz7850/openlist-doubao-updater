@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenList 豆包一键更新 - 设置</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+      font-size: 14px;
+      color: #1f2329;
+      background: #fafbfc;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+    .card {
+      width: 460px;
+      background: #fff;
+      border: 1px solid #e3e8f3;
+      border-radius: 10px;
+      padding: 24px 28px;
+    }
+    h1 { font-size: 18px; margin-bottom: 6px; color: #3254ab; }
+    .tip { font-size: 12px; color: #8a919f; margin-bottom: 18px; line-height: 1.6; }
+    label { display: block; margin-bottom: 14px; font-size: 13px; color: #4a5060; }
+    input {
+      display: block;
+      width: 100%;
+      margin-top: 6px;
+      padding: 8px 10px;
+      border: 1px solid #cdd4e3;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+    input:focus { outline: none; border-color: #3254ab; }
+    button {
+      padding: 9px 22px;
+      border: none;
+      border-radius: 6px;
+      background: #3254ab;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover { background: #4164bd; }
+    #saved { margin-left: 10px; color: #1d7a3c; font-size: 13px; }
+    .warn { margin-top: 16px; font-size: 12px; color: #9a6b14; line-height: 1.6; background: #fff8ec; border: 1px solid #f5e3bf; border-radius: 6px; padding: 8px 10px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>OpenList 豆包一键更新 - 设置</h1>
+    <p class="tip">填写你自己的 OpenList 服务器信息。账号密码只保存在本机浏览器扩展存储中，不会上传到任何第三方。</p>
+
+    <label>OpenList 服务器地址
+      <input id="server" placeholder="http://你的服务器地址:5244">
+    </label>
+    <label>用户名
+      <input id="username" autocomplete="off">
+    </label>
+    <label>密码
+      <input id="password" type="password" autocomplete="off">
+    </label>
+    <label>豆包存储 ID
+      <input id="storageId" type="number" placeholder="例如 5">
+    </label>
+    <label>Admin Token（可选，留空则用上面的用户名密码登录）
+      <input id="token" type="password" autocomplete="off" placeholder="OpenList 管理后台 - 设置 - 其他 中的 Token">
+    </label>
+
+    <button id="save">保存</button>
+    <span id="saved"></span>
+
+    <div class="warn">提示：保存时浏览器会询问是否允许扩展访问你填写的服务器地址，点「允许」即可。之后点扩展图标一键更新即可。</div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "OpenList 豆包一键更新",
+  "version": "1.1.0",
+  "description": "一键读取浏览器中豆包云盘的 Cookie，更新到 OpenList 豆包存储，解决豆包 Cookie 频繁过期问题",
+  "permissions": ["cookies", "storage", "permissions"],
+  "host_permissions": [
+    "https://*.doubao.com/*",
+    "http://*.doubao.com/*"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
